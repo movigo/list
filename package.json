@@ -29,9 +29,6 @@
   "bugs": {
     "url": "https://github.com/movigo/list/issues"
   },
-  "peerDependencies": {
-    "@movigo/core": "0.6.0"
-  },
   "dependencies": {
     "@movigo/core": "0.6.0"
   },
