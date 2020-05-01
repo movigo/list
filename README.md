@@ -10,14 +10,19 @@
     <a href="https://github.com/movigo/list/blob/master/LICENSE" target="_blank">
         <img src="https://img.shields.io/github/license/movigo/list.svg?style=flat-square">
     </a>
+    <a href="https://david-dm.org/movigo/list" target="_blank">
+        <img src="https://img.shields.io/david/movigo/list.svg?style=flat-square">
+    </a>
     <a href="https://david-dm.org/movigo/list?type=dev" target="_blank">
         <img src="https://img.shields.io/david/dev/movigo/list.svg?style=flat-square">
     </a>
 </p>
+
 ________________________________
 
 ## :paperclip: Table of Contents
 - :hammer: [Install](#hammer-install)
+- :video_game: [Usage](#video_game-usage)
 - :chart_with_upwards_trend: [Development](#chart_with_upwards_trend-development)
   - :scroll: [Rules](#scroll-rules)
     - [Commits](#commits)
@@ -30,15 +35,37 @@ ________________________________
 
 ### npm
 
-You can install movigo package with npm:
+You can install movigo list plugin with npm:
 
-    npm install @movigo/list --save
+```bash
+npm install @movigo/list --save
+```
     
 ### CDN
 
 You can also load it using a \<script> using the unpkg CDN:
     
-    <script src="https://unpkg.com/@movigo/list"></script>
+```html
+<script src="https://unpkg.com/@movigo/core"></script> <!-- Required dependency -->
+<script src="https://unpkg.com/@movigo/list"></script>
+```
+
+## :video_game: Usage
+
+List plugin create a `list` function in the Movigo function chaining.
+You must select list elements with `target` function and call `list` function with the optional `options` parameter.
+List plugin create an animation for each list element.
+
+```js
+const target = movigo.target('ul > li')
+
+target.list({
+    x: 200, // Initial relative x coordinate (default: 0)
+    y: 200, // Initial relative y coordinate (default: 100)
+    duration: .5, // Animation duration (default: .3)
+    easing: 'linear' // Easing function (default: 'cubic-bezier(0.0, 0.0, 0.2, 1)')
+}).animate()
+```
 
 ## :chart_with_upwards_trend: Development
 
