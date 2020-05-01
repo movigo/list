@@ -36,6 +36,7 @@ export default [
     plugins: [
       ...config.plugins,
       terser({
+        keep_fnames: true,
         output: {
           preamble: config.output.banner
         }
