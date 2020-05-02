@@ -7,7 +7,7 @@ require('../dist/movigo-list')
 ;(async function IIFE () {
   global.window = (await JSDOM.fromFile('index.html')).window
 
-  tape('Library should return a list of available action functions', function (test) {
+  tape('Plugin should add a list function in Movigo library', function (test) {
     const target = movigo.target('div')
 
     test.equal(typeof target.list, 'function')
