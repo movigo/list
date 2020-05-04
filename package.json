@@ -30,7 +30,7 @@
     "url": "https://github.com/movigo/list/issues"
   },
   "dependencies": {
-    "@movigo/core": "0.6.0"
+    "@movigo/core": "0.6.1"
   },
   "devDependencies": {
     "jsdom": "16.2.2",
