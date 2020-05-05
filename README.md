@@ -31,11 +31,11 @@ ________________________________
 - :telephone_receiver: [Contacts](#telephone_receiver-contacts)
   - :boy: [Developers](#boy-developers)
 
-## :hammer: Install
+## Install
 
-### npm
+### NPM
 
-You can install movigo list plugin with npm:
+You can install Movigo list plugin with NPM:
 
 ```bash
 npm install @movigo/list --save
@@ -43,28 +43,30 @@ npm install @movigo/list --save
     
 ### CDN
 
-You can also load it using a \<script> using the unpkg CDN:
+You can also load it with CDNs:
     
 ```html
-<script src="https://unpkg.com/@movigo/core"></script> <!-- Required dependency -->
-<script src="https://unpkg.com/@movigo/list"></script>
+  <script src="https://unpkg.com/@movigo/core"></script> <!-- Required dependency -->
+  <script src="https://unpkg.com/@movigo/list"></script>
 ```
 
-## :video_game: Usage
+## Usage
 
-List plugin create a `list` function in the Movigo function chaining.
-You must select list elements with `target` function and call `list` function with the optional `options` parameter.
-List plugin create an animation for each list element.
+List plugin allows you to create and manage animations for lists of elements,
+with slide-in and fade-in effects.
+
+It is possible to define initial coordinates and set a duration and an easing function
+for each element, while the delay between the elements of the list is defined according to the duration.
 
 ```js
-const target = movigo.target('ul > li')
+  const elements = document.querySelectorAll('li')
 
-target.list({
+  await movigo.target(elements).list({
     x: 200, // Initial relative x coordinate (default: 0)
     y: 200, // Initial relative y coordinate (default: 100)
     duration: .5, // Animation duration (default: .3)
     easing: 'linear' // Easing function (default: 'cubic-bezier(0.0, 0.0, 0.2, 1)')
-}).animate()
+  }).animate()
 ```
 
 ## :chart_with_upwards_trend: Development
